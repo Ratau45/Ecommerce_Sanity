@@ -22,20 +22,20 @@ const Product = ({product: {name, image, price, slug}}) => {
     //   </Link>
     // </div>
 <Link href={`/product/${slug.current}`}>
-    <div class="card">
-    <div class="image">
-      <img src={urlFor(image && image[0])}/>
+    <div className="card">
+    <div className="image">
+      <Image src={urlFor(image && image[0])} alt="picture"/>
     </div>
-    <div class="details">
-      <div class="center">
+    <div className="details">
+      <div className="center">
         <h1>R{price}<br/><span>team leader</span></h1>
         <p>{name}</p>
         <ul>
-          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i className="fa fa-google-plus" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
         </ul>
       </div>
     </div>

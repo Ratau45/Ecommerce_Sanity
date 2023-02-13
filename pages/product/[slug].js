@@ -3,7 +3,7 @@ import {AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar} from 'react-ic
 import { client, urlFor } from '../components/Lib/client';
 import Product from '../components/Product';
 import { useStateContext } from '../../context/StateContext';
-
+import Image from 'next/image'
 
 //what you did here [] is a dynamic route that next.js provides.
 //it allows you to pass named params to this component..the in the bracket becomes the param name (slug) poi
@@ -23,11 +23,12 @@ const ProductDetails = ({product,products}) => {
     <div className='product-detail-container'>
         <div>
             <div className='image-container'>
-                <img src={urlFor(image && image[index])} className="product-detail-image"/>
+                <Image alt="picture" src={urlFor(image && image[index])} className="product-detail-image"/>
             </div>
          <div className="small-images-container">
             {image?.map((item,i)=>(
-              <img
+              <Image
+              alt="picture"
               key={i}
                 src={urlFor(item)}
                 className={i ===index ? 'small-image selected-image' : 'small-image'}

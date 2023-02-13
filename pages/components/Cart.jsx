@@ -6,6 +6,7 @@ import { useStateContext } from '../../context/StateContext';
 import {TiDeleteOutline} from 'react-icons/ti';
 import {urlFor} from './Lib/client';
 import getStripe from './Lib/getStripe';
+import Image from 'next/image'
 
 const Cart = () => {
   const cartRef = useRef();
@@ -61,8 +62,9 @@ const Cart = () => {
         <div className='product-container'>
            {cartItems.length >= 1 && cartItems.map((item) =>
            <div className='product' key={item._id}>
-            <img src={urlFor(item?.image[0])}
-            className="cart-product-image" />
+            <Image src={urlFor(item?.image[0])}
+            className="cart-product-image"
+            alt="Failed To Upload Picture" />
             <div className='item-desc'>
               <div className='flex top'>
                 <h5>{item.name}</h5>
