@@ -3,7 +3,6 @@ import * as yup from "yup";
 import {useFormik} from "formik";
 import { Button, Container, Row, Form, Alert } from "react-bootstrap";
 import { useStateContext } from '../context/StateContext';
-import Signup from './signup';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
