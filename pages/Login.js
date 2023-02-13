@@ -50,9 +50,9 @@ const Login = (props) =>{
             <div className="text-center">
               Not registered yet?{" "}
             
-              <a className="link-primary" href='/Signup'>
+              <Link className="link-primary" href='/Signup'>
                 Sign Up
-              </a>
+              </Link>
               
             </div>
             <Form.Group controlId="email">
@@ -96,7 +96,7 @@ const Login = (props) =>{
               </Button>
             </div>
             <p className="text-center mt-2">
-              Forgot <a href="#">password?</a>
+              Forgot <Link href="#">password?</Link>
             </p>
           </div>
         </Form>
